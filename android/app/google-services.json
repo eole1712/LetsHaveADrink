@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "55766518931",
+    "firebase_url": "https://letshaveadrink-50d09.firebaseio.com",
+    "project_id": "letshaveadrink-50d09",
+    "storage_bucket": "letshaveadrink-50d09.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:55766518931:android:be6309b4113d4ee3",
+        "android_client_info": {
+          "package_name": "com.letshaveadrink"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "55766518931-188pam7crcrhejl91qrd0het2br7jr7k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbmLlSaSYMAg4peqwi0tbb6ii_4kKHEP8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
