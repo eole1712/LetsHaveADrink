@@ -6,8 +6,9 @@ export default StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'center',
+    alignItems: 'stretch',
     backgroundColor: '#F5FCFF',
+    padding: 50,
   },
   welcome: {
     fontSize: 20,
@@ -20,13 +21,25 @@ export default StyleSheet.create({
     marginBottom: 5,
   },
   map_container: {
-    ...StyleSheet.absoluteFillObject,
     height: '100%',
     width: '100%',
     justifyContent: 'flex-end',
     alignItems: 'center',
   },
   map_content: {
-    ...StyleSheet.absoluteFillObject,
-  },    
+    width: '100%',
+    height: '100%',    
+  },
+  button: {
+    marginTop: 20,
+  },
+  noNetworkContainer: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: '100%',
+  },
+  noNetwork: {
+    color: 'red',
+  }
+
 });

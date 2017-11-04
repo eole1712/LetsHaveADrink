@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Platform, Text, View, Button, TextInput, Alert, FlatList, TouchableHighlight } from 'react-native';
+import { Platform, Text, View, Button, TextInput, Alert, FlatList, TouchableOpacity } from 'react-native';
 import MapView from 'react-native-maps';
 import firebase from 'react-native-firebase';
 
@@ -27,15 +27,15 @@ export default class List extends Component {
     const { markers } = this.props;
 
     return (
-      <View style={{backgroundColor: 'white'}}>
+      <View style={{height:'100%', width: '100%', backgroundColor: 'rgba(255, 255, 255, 0.75)', padding: 50}}>
       <FlatList
         data={Object.keys(markers).map(key => ({ key }))}
         renderItem={({ item: { key } }) => (
-          <TouchableHighlight onPress={() => this.selectMarker(key)}>
-            <Text>
+          <TouchableOpacity style={{marginVertical: 2, paddingVertical: 5, backgroundColor:'#EEEEEE'}} onPress={() => this.selectMarker(key)}>
+            <Text style={{textAlign:'center'}}>
               {markers[key].email}
             </Text>
-          </TouchableHighlight>
+          </TouchableOpacity>
         )}
       />
       </View>

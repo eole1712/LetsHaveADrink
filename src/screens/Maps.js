@@ -2,10 +2,13 @@ import React, { Component } from 'react';
 import { Platform, Text, View, Button, TextInput, Alert } from 'react-native';
 import MapView from 'react-native-maps';
 import firebase from 'react-native-firebase';
+import { withNetworkConnectivity } from 'react-native-offline';
+
+import NoNetwork from './NoNetwork'
 
 import styles from './styles';
 
-export default class Maps extends Component {
+class Maps extends Component {
   constructor(props) {
     super(props);
 
@@ -96,7 +99,8 @@ export default class Maps extends Component {
   }
 
   static navigatorStyle = {
-    navBarTranslucent: true
+    navBarTranslucent: true,
+    drawUnderNavBar: true,
   };
 
   render() {
@@ -106,22 +110,30 @@ export default class Maps extends Component {
         <MapView.Marker.Animated coordinate={{ latitude: this.state.markers[id].latitude, longitude: this.state.markers[id].longitude }} key={id}/>
       );
     });
+    console.log(this.props);
+
+    const map = (
+      <MapView
+        style={styles.map_content}
+        region={{
+          latitude: this.state.position.latitude,
+          longitude: this.state.position.longitude,
+          latitudeDelta: 0.015,
+          longitudeDelta: 0.0121,
+        }}
+      >
+        {Markers}
+      </MapView>
+    );
 
     return (
       <View style ={styles.map_container}>
-        <MapView
-          style={styles.map_content}
-          region={{
-            latitude: this.state.position.latitude,
-            longitude: this.state.position.longitude,
-            latitudeDelta: 0.015,
-            longitudeDelta: 0.0121,
-            showsUserLocation: true,
-          }}
-        >
-          {Markers}
-        </MapView>
+        {map}
       </View>
     );
   }
 }
+
+export default withNetworkConnectivity({
+  checkConnectionInterval: 5000,
+})(Maps);
