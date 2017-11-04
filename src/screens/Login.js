@@ -21,7 +21,8 @@ class Login extends Component {
   }
 
   static navigatorStyle = {
-    navBarTranslucent: true
+    navBarTranslucent: true,
+    drawUnderNavBar: true,    
   };
 
   register = async () => {
