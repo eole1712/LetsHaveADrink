@@ -16,8 +16,8 @@ Interface intuitive.
 Optimisation de la gestion de la batterie avec rendering seulement dans les cas utiles.
 
 ### Le groupe est composé de :
-Grisha Ghukasyan (grisha.ghukasyan@epitech.eu)
-Thibault Malbranche (thibault.malbranche@epitech.eu)
+**Grisha Ghukasyan** (grisha.ghukasyan@epitech.eu)
+**Thibault Malbranche** (thibault.malbranche@epitech.eu)
 
 Nous n'avons pas assisté au cours du module.
 
