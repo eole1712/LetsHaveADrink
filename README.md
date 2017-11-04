@@ -24,3 +24,5 @@ Nous n'avons pas assisté au cours du module.
 *Vous pouvez vous créer autant de comptes que vous voulez afin de tester l'application. Ne pas hésiter à émuler la position*
 
 APK : **APPLICATION.apk**
+
+Nous vous avons ajouté les accès Firebase sur nicolas.laurio@southside-interactive.com
